@@ -1,0 +1,38 @@
+[
+    {
+        "Name": "adaptive_block_size",
+        "Title": "Adaptive Block Size: Dynamic Context Window Adjustment for Efficient Training",
+        "Experiment": "Modify the model to dynamically adjust its block size during training, starting with a smaller block size and gradually increasing it. This could potentially lead to faster initial training and better long-range dependency learning.",
+        "Interestingness": 6,
+        "Feasibility": 4,
+        "Novelty": 4,
+        "novel": true
+    },
+    {
+        "Name": "layerwise_learning_rates",
+        "Title": "Layer-wise Learning Rate Adaptation: Optimizing Training Dynamics in Transformer Models",
+        "Experiment": "Implement layer-wise learning rates, where each transformer layer has its own learning rate. Modify the configure_optimizers function to assign different learning rates to different layers, with deeper layers having lower learning rates. Compare the training dynamics, convergence speed, and final performance with the baseline model.",
+        "Interestingness": 4,
+        "Feasibility": 6,
+        "Novelty": 2,
+        "novel": false
+    },
+    {
+        "Name": "mixture_of_experts",
+        "Title": "Mixture of Experts: Enhancing Transformer Efficiency with Dynamic Expert Selection",
+        "Experiment": "Integrate a Mixture of Experts (MoE) module within the transformer architecture. Modify the Block class to include a small number of expert sub-layers (e.g., 2-4 experts) and implement a simple gating mechanism (e.g., a learned softmax gate) to route inputs to one or two of these experts. Adapt the forward function to dynamically select and combine expert outputs. Compare the performance, training time, and inference efficiency with the baseline model.",
+        "Interestingness": 8,
+        "Feasibility": 6,
+        "Novelty": 7,
+        "novel": false
+    },
+    {
+        "Name": "adaptive_gradient_clipping",
+        "Title": "Adaptive Gradient Clipping: Dynamic Adjustment for Stable and Efficient Training",
+        "Experiment": "Modify the training loop to incorporate adaptive gradient clipping. Introduce a mechanism to dynamically adjust the gradient clipping threshold based on the moving average of the gradient norm. Calculate the moving average of the gradient norm at each iteration and update the clipping threshold accordingly. Update the gradient clipping logic in the training loop to use this adaptive threshold. Compare the training stability, convergence speed, and final model performance with the baseline model.",
+        "Interestingness": 7,
+        "Feasibility": 6,
+        "Novelty": 7,
+        "novel": false
+    }
+]

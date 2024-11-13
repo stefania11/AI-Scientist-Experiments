@@ -1,0 +1,5 @@
+# Title: Adaptive Block Size: Dynamic Context Window Adjustment for Efficient Training
+# Experiment description: Modify the model to dynamically adjust its block size during training, starting with a smaller block size and gradually increasing it. This could potentially lead to faster initial training and better long-range dependency learning.
+## Run 0: Baseline
+Results: {'shakespeare_char': {'final_train_loss_mean': 2.5739649534225464, 'best_val_loss_mean': 2.57385516166687, 'total_train_time_mean': 237.57080340385437, 'avg_inference_tokens_per_second_mean': 91.4389169583151}}
+Description: Baseline results.
