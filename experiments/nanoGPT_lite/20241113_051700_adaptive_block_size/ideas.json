@@ -1,0 +1,38 @@
+[
+    {
+        "Name": "adaptive_block_size",
+        "Title": "Adaptive Block Size: Dynamic Context Window Adjustment for Efficient Training",
+        "Experiment": "Modify the model to dynamically adjust its block size during training, starting with a smaller block size and gradually increasing it. This could potentially lead to faster initial training and better long-range dependency learning.",
+        "Interestingness": 6,
+        "Feasibility": 4,
+        "Novelty": 4,
+        "novel": true
+    },
+    {
+        "Name": "layerwise_learning_rates",
+        "Title": "Layer-wise Learning Rate Adaptation: Optimizing Training Dynamics in Transformer Models",
+        "Experiment": "Implement layer-wise learning rates, where each transformer layer has its own learning rate. Modify the configure_optimizers function to assign different learning rates to different layers, with deeper layers having lower learning rates. Compare the training dynamics, convergence speed, and final performance with the baseline model.",
+        "Interestingness": 4,
+        "Feasibility": 6,
+        "Novelty": 2,
+        "novel": true
+    },
+    {
+        "Name": "dynamic_parameter_sharing",
+        "Title": "Dynamic Parameter Sharing: Efficient Transformer Training with Context-Aware Parameter Activation",
+        "Experiment": "Modify the Block class to include shared parameters that can be dynamically activated based on the input context. Implement a mechanism to selectively activate these shared parameters during training and inference. Evaluate the model's performance, training time, and computational efficiency compared to the baseline model.",
+        "Interestingness": 7,
+        "Feasibility": 7,
+        "Novelty": 6,
+        "novel": true
+    },
+    {
+        "Name": "adaptive_dropout",
+        "Title": "Adaptive Dropout Rates: Dynamic Regularization for Improved Training Efficiency",
+        "Experiment": "Implement a mechanism to dynamically adjust the dropout rates in the CausalSelfAttention and MLP classes based on the validation loss and training progress. The dropout rate should start high and decrease as the validation loss improves or at regular intervals. Define minimum and maximum dropout rates to prevent extreme values. Add a function in the train loop to adjust dropout rates at the end of each evaluation interval. Compare the model's performance, training time, and generalization ability with the baseline model.",
+        "Interestingness": 8,
+        "Feasibility": 7,
+        "Novelty": 7,
+        "novel": false
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "Name": "adaptive_block_size",
+        "Title": "Adaptive Block Size: Dynamic Context Window Adjustment for Efficient Training",
+        "Experiment": "Modify the model to dynamically adjust its block size during training, starting with a smaller block size and gradually increasing it. This could potentially lead to faster initial training and better long-range dependency learning.",
+        "Interestingness": 6,
+        "Feasibility": 4,
+        "Novelty": 4,
+        "novel": true
+    },
+    {
+        "Name": "layerwise_learning_rates",
+        "Title": "Layer-wise Learning Rate Adaptation: Optimizing Training Dynamics in Transformer Models",
+        "Experiment": "Implement layer-wise learning rates, where each transformer layer has its own learning rate. Modify the configure_optimizers function to assign different learning rates to different layers, with deeper layers having lower learning rates. Compare the training dynamics, convergence speed, and final performance with the baseline model.",
+        "Interestingness": 4,
+        "Feasibility": 6,
+        "Novelty": 2,
+        "novel": true
+    },
+    {
+        "Name": "curriculum_learning",
+        "Title": "Curriculum Learning: Gradual Increase of Sequence Length for Efficient Language Model Training",
+        "Experiment": "Modify the train function to start training with a smaller block size and switch to larger block sizes at predefined iterations. Define initial, intermediate, and maximum block sizes. Implement a schedule for switching block sizes (e.g., every 20 iterations). Evaluate the effect on training dynamics, convergence speed, and final performance.",
+        "Interestingness": 7,
+        "Feasibility": 6,
+        "Novelty": 6,
+        "novel": false
+    },
+    {
+        "Name": "layerwise_freezing",
+        "Title": "Layer-Wise Freezing: Progressive Freezing of Transformer Layers for Efficient Training",
+        "Experiment": "Modify the train function to progressively freeze layers of the model as training progresses. Define a schedule for freezing layers, such as freezing one layer every 'n' iterations. Implement the freezing mechanism by setting the 'requires_grad' attribute of the layer's parameters to False once they are frozen. Evaluate the impact on training speed, convergence dynamics, and overall model performance compared to the baseline model. Specifically, measure the time per iteration, total training time, and the final validation loss.",
+        "Interestingness": 8,
+        "Feasibility": 7,
+        "Novelty": 7,
+        "novel": true
+    }
+]
